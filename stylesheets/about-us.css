@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+}
+/*NAVBAR START*/
+
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0px 0px 0px 100px; */
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: #28328c;
+  font-size: 30px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #28328c;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #2cb7df;
+}
+nav .menu-btn i {
+  color: #28328c;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav ul {
+    z-index: 1000;
+  }
+}
+/* @media (max-width: 1300px) {
+  nav ul {
+    z-index: 1000;
+  }
+  nav .logo {
+    font-size: 18px;
+  }
+} */
+@media (max-width: 1250px) {
+  nav {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+  }
+}
+@media (max-width: 1250px) {
+  nav {
+    padding-right: 5vw;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #2cb7df;
+  }
+}
+@media (max-width: 600px) {
+  nav .logo {
+    font-size: 20px;
+  }
+  nav .logo img {
+    width: 200px;
+    height: 50px;
+  }
+}
+@media (max-width: 426px) {
+  nav .logo {
+    font-size: 18px;
+  }
+  nav .logo img {
+    width: 200px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 769px) {
+  .reviews {
+    display: none !important;
+  }
+  .more {
+    display: none;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div {
+  font-size: 40px;
+  font-weight: 700;
+}
+/*NAVBAR END*/
+
+/*HEADING START*/
+.heading-container {
+  background-color: #f6f6f6;
+  padding: 5%;
+  color: #28328c;
+}
+.heading-container h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.aboutUsMessage {
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  padding-left: 8vw;
+  padding-right: 5vw;
+}
+/*HEADING END*/
+
+.aboutUsMessage {
+  display: flex;
+}
+
+.aboutUsText {
+  flex: 1;
+  margin-right: 5vw;
+}
+
+.aboutUsHeading {
+  font-size: 25px;
+  line-height: 35px;
+  color: #28328c;
+  font-weight: 500;
+}
+
+.aboutUsSubHeading {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.doc1 {
+  flex: 1;
+  margin-right: 2vw;
+}
+
+.doc2 {
+  flex: 1;
+}
+
+.docName {
+  font-size: 25px;
+  line-height: 35px;
+  color: #28328c;
+  font-weight: 500;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+.docQualification {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #333333;
+}
+
+@media (max-width: 1000px) {
+  .aboutUsMessage {
+    display: block;
+  }
+}
+
+.patientReviewsHeading {
+  color: white;
+  font-size: 30px;
+  padding-top: 5vh;
+  font-weight: 400 !important;
+  padding-bottom: 10vh;
+}
+
+.patientReviews {
+  padding-top: 2vh;
+  background-color: rgba(44, 183, 223, 0.7);
+  text-align: center;
+}
+
+.makeAppoitment {
+  display: flex;
+}
+
+.btn1 {
+  color: #ffffff;
+  background-color: #3e4144;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.btn1:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn2 {
+  padding-top: 4vh;
+}
+
+.makeAppoitment {
+  padding: 7vh;
+  background-color: #2cb7df;
+}
+
+.googleReviewsButton {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #28328c;
+  color: white;
+  border: none;
+  /* width: 250px; */
+  letter-spacing: 2px;
+}
+.googleReviewsButton:hover{
+  text-decoration: none;
+  color:white;
+}
+
+.reviewImages {
+  width: 40vw;
+  height: 20vh;
+}
+
+.reviews {
+  display: flex;
+}
+
+.row1 {
+  flex: 1;
+  padding-bottom: 2vh;
+}
+
+.row2 {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .aboutUsMessage {
+    display: block;
+  }
+
+  .reviews {
+    display: block;
+  }
+
+  .aboutUsMessage {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    padding-left: 2vw;
+    /* padding-right: 5vw; */
+  }
+  .image1 {
+    width: 300px;
+  }
+  .makeAppoitment {
+    display: block;
+  }
+
+  .btn1 {
+    color: #ffffff;
+    background-color: #3e4144;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    letter-spacing: 2px;
+    width: 250px;
+    margin-right: 10px;
+  }
+
+  .makeAppoitment {
+    padding: 5vh;
+    background-color: #2cb7df;
+  }
+}
+
+.makeAppoitmentText {
+  flex: 2;
+}
+
+.makeAppoitmentBtn {
+  flex: 1;
+  /* text-align: center; */
+}
+
+.makeAppoitmentText {
+  font-size: 35px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+}
+
+/*FOOTER START*/
+.footer {
+  background-color: #3e4144;
+  color: #ffffff;
+  margin: 0px;
+  padding: 1%;
+}
+.footer div li a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer div li a:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
+#footer-contact > a,
+#footer-email > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/*FOOTER END*/
+/*Whatsapp icon*/
+
+.whatsapp_float {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 10000;
+}
